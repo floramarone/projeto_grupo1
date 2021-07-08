@@ -9,16 +9,17 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import persistencia.Conexao;
-import Modelo.TarefaVO;
+import Modelo.LembreteVO;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
 /**
  *
  * @author flora
  */
-public class TarefaDAO {
+public class LembreteDAO {
     
-        public void cadastrarTarefa(TarefaVO tVO) throws SQLException{
+    public void cadastrarLembrete(LembreteVO lVO) throws SQLException{
         //Busca conexão com o banco de dados
         Connection con = Conexao.getConexao();
         //Cria um objeto "stat" responsável por enviar os comandos de banco do java para serem executados dentro do BD
@@ -26,37 +27,36 @@ public class TarefaDAO {
         try{
             String sql;//String que receberá o comando SQL
             
-            sql = "insert into tarefa(codigo, dia_semana, data, horario, descricao, nome)"
-                    +"values(null, '"+tVO.getDia_semana()+"', '"+tVO.getData()+"', '"+tVO.getHorario()+"', '"+tVO.getDescricao()+"', '"+tVO.getNome()+"')";
+            sql = "insert into lembrete(codigo, dia_semana, data, titulo, comentario)"
+                    +"values(null, '"+lVO.getDia_semana()+"', '"+lVO.getData()+"', '"+lVO.getTitulo()+"', '"+lVO.getComentario()+"')";
             stat.execute(sql);
         }catch(SQLException e){
-            throw new SQLException("Erro ao inserir tarefa!"+e.getMessage());
+            throw new SQLException("Erro ao inserir lembrete!"+e.getMessage());
         }finally{
             stat.close();
             con.close();
         }        
     }   
-     
-        public ArrayList<TarefaVO> buscar() throws SQLException{
+    
+    public ArrayList<LembreteVO> buscarLembrete() throws SQLException{
         Connection con = Conexao.getConexao();
         Statement stat = con.createStatement();
         try{
             String sql;
-            sql = "select * from tarefa";
+            sql = "select * from lembrete ";
             ResultSet rs = stat.executeQuery(sql);
-            ArrayList<TarefaVO> tarefa = new ArrayList<>();
+            ArrayList<LembreteVO> lembrete = new ArrayList<>();
             
             while(rs.next()){
-                TarefaVO t = new TarefaVO();
-                t.setCodigo(rs.getInt("codigo"));
-                t.setDia_semana(rs.getString("dia_semana"));
-                t.setData(rs.getString("data"));
-                t.setHorario(rs.getString("horario"));
-                t.setDescricao(rs.getString("descricao"));
-                t.setNome(rs.getString("nome"));
-                tarefa.add(t);
+                LembreteVO l = new LembreteVO();
+                l.setCodigo(rs.getInt("codigo"));
+                l.setDia_semana(rs.getString("dia_semana"));
+                l.setData(rs.getString("data"));
+                l.setTitulo(rs.getString("titulo"));
+                l.setComentario(rs.getString("comentario"));
+                lembrete.add(l);
             }
-            return tarefa;
+            return lembrete;
             
         }catch(SQLException e){
             throw new SQLException ("Erro ao buscar dados no banco"+e.getMessage());
@@ -65,13 +65,12 @@ public class TarefaDAO {
            con.close(); 
         }
         }
-        
-        public void alterarTarefa (TarefaVO tVo) throws SQLException{
+    public void alterarLembrete (LembreteVO lVo) throws SQLException{
         Connection con = Conexao.getConexao();
         Statement sta = con.createStatement();
         try{
             String sql;
-            sql="update tarefa set  dia_semana = '"+tVo.getDia_semana()+ "', data = '"+tVo.getData()+ "',horario = '"+tVo.getHorario()+ "', descricao = '"+tVo.getDescricao()+"' ,nome = '"+tVo.getNome()+"' where codigo= "+tVo.getCodigo();
+            sql="update lembrete set  dia_semana = '"+lVo.getDia_semana()+ "', data = '"+lVo.getData()+ "',titulo = '"+lVo.getTitulo()+ "', comentario = '"+lVo.getComentario()+"' where codigo= "+lVo.getCodigo();
             sta.executeUpdate(sql);
             
         }catch(SQLException e){
@@ -81,13 +80,14 @@ public class TarefaDAO {
             con.close();  
         }
         }
-        
-        public void deletarTarefa(int codigo) throws SQLException{
+    
+    
+    public void deletarLembrete(int codigo) throws SQLException{
         Connection con = Conexao.getConexao();
         Statement sta = con.createStatement();
         try{
             String sql;
-            sql="delete from tarefa where codigo ="+codigo;
+            sql="delete from lembrete where codigo ="+codigo;
             sta.execute(sql);
         }catch(SQLException e){
              throw new SQLException ("Erro ao excluir dados no banco"+e.getMessage());
@@ -96,27 +96,26 @@ public class TarefaDAO {
            con.close();  
         }
         }
-        
-        public ArrayList<TarefaVO> filtrar(String query) throws SQLException{
+    
+    public ArrayList<LembreteVO> filtrarLembrete(String query) throws SQLException{
         Connection con = Conexao.getConexao();
         Statement sta = con.createStatement();
         try{
             String sql;
-            sql="select * from tarefa "+query;            
+            sql="select * from lembrete "+query;            
             ResultSet rs = sta.executeQuery(sql);
-            ArrayList<TarefaVO> tarefa = new ArrayList<>();
+            ArrayList<LembreteVO> lembrete = new ArrayList<>();
             
             while(rs.next()){
-                TarefaVO t = new TarefaVO();
+                LembreteVO t = new LembreteVO();
                 t.setCodigo(rs.getInt("codigo"));
                 t.setDia_semana(rs.getString("dia_semana"));
                 t.setData(rs.getString("data"));
-                t.setHorario(rs.getString("horario"));
-                t.setDescricao(rs.getString("descricao"));
-                t.setNome(rs.getString("nome"));
-                tarefa.add(t);
+                t.setTitulo(rs.getString("titulo"));
+                t.setComentario(rs.getString("comentario"));
+                lembrete.add(t);
             }
-            return tarefa;
+            return lembrete;
             
             
         }catch(SQLException e){
@@ -127,5 +126,4 @@ public class TarefaDAO {
         }
         
     }
-        
 }

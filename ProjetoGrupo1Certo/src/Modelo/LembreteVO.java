@@ -11,7 +11,16 @@ package Modelo;
  */
 public class LembreteVO {
     private String dia_semana, data, titulo, comentario;
+    private long codigo;
 
+    public long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
+    }
+    
     public String getDia_semana() {
         return dia_semana;
     }
