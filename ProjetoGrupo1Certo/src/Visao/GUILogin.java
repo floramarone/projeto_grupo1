@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Visao;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,16 +26,15 @@ public class GUILogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Login e/ou senha incorreto(s)", "Erro", JOptionPane.ERROR_MESSAGE);
         }
         */
-        GUIDash d = new GUIDash();
-        
-        jDesktopPrincipal.add(d);
-        d.setVisible(true);
+        GUIPrincipal p = new GUIPrincipal();
+        p.setVisible(true);
+        this.setVisible(false);
     }
         
     public void cadastrar() {
         GUICadastro c = new GUICadastro();
-        jDesktopPrincipal.add(c);
         c.setVisible(true);
+        this.setVisible(false);
     }
     
     
