@@ -2,33 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <group/>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUIDash.java</file>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUICadastro.java</file>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUILogin.java</file>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUIRedefinirSenha.java</file>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUILembrete.java</file>
-            <file>file:/C:/Users/FERNANDO%20FINK/Documents/Repositórios%20Git%20Hub/Atividade%20Grupo1/ProjetoGrupo1Certo/src/Visao/GUITarefa.java</file>
+            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/Visao/GUITarefa.java</file>
+            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/Visao/GUIHistoricoLembretes.java</file>
         </group>
->>>>>>> d074be0c8bff0ea152709273adbdea1c566e9ea7
-=======
-        <group/>
->>>>>>> fernando
->>>>>>> 579771eb94ced3d5cd4003ab24bd35e096d3e23c
-=======
-        <group>
-            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/Visao/GUILembrete.java</file>
-            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/dao/DAOFactory.java</file>
-            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/dao/LembreteDAO.java</file>
-        </group>
->>>>>>> work
     </open-files>
 </project-private>
