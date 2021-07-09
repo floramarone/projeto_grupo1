@@ -34,17 +34,15 @@ public class GUILembrete extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel9 = new javax.swing.JPanel();
-        jcbContato8 = new javax.swing.JComboBox();
+        jcbTitulo = new javax.swing.JComboBox();
         jlData8 = new javax.swing.JLabel();
-        jlHorario8 = new javax.swing.JLabel();
-        jlNome8 = new javax.swing.JLabel();
-        jlObservacao8 = new javax.swing.JLabel();
+        jlDiaSemana = new javax.swing.JLabel();
+        jlLembrete = new javax.swing.JLabel();
         jlEnviarLembrete8 = new javax.swing.JLabel();
-        jtfNome8 = new javax.swing.JTextField();
+        jtfDiaSemana = new javax.swing.JTextField();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jtaObservacao8 = new javax.swing.JTextArea();
+        jtaComentario = new javax.swing.JTextArea();
         jftfData8 = new javax.swing.JFormattedTextField();
-        jftfHorario8 = new javax.swing.JFormattedTextField();
         jlEnviar8 = new javax.swing.JLabel();
         jlVoltar8 = new javax.swing.JLabel();
         jbHistorico = new javax.swing.JButton();
@@ -53,32 +51,29 @@ public class GUILembrete extends javax.swing.JFrame {
 
         jPanel9.setBackground(new java.awt.Color(199, 212, 219));
 
-        jcbContato8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jcbContato8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecionar Contato", "Andressa", "Camila", "Edmundo", "Eduardo", "Fernando", "Flora", "Gabriel Matiolla", "Gabriel Medeiros", "Isabella", "Jaderson", "Gustavo", "Lucas", "Marco", "Thiago", "Tiago", " " }));
-        jcbContato8.addActionListener(new java.awt.event.ActionListener() {
+        jcbTitulo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jcbTitulo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecionar Contato", "Andressa", "Camila", "Edmundo", "Eduardo", "Fernando", "Flora", "Gabriel Matiolla", "Gabriel Medeiros", "Isabella", "Jaderson", "Gustavo", "Lucas", "Marco", "Thiago", "Tiago", " " }));
+        jcbTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbContato8ActionPerformed(evt);
+                jcbTituloActionPerformed(evt);
             }
         });
 
         jlData8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jlData8.setText("Data:");
 
-        jlHorario8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlHorario8.setText("Horário:");
+        jlDiaSemana.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jlDiaSemana.setText("Dia da Semana:");
 
-        jlNome8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlNome8.setText("Nome:");
-
-        jlObservacao8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jlObservacao8.setText("Observação");
+        jlLembrete.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jlLembrete.setText("Lembrete:");
 
         jlEnviarLembrete8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlEnviarLembrete8.setText("Enviar Lembrete");
 
-        jtaObservacao8.setColumns(20);
-        jtaObservacao8.setRows(5);
-        jScrollPane9.setViewportView(jtaObservacao8);
+        jtaComentario.setColumns(20);
+        jtaComentario.setRows(5);
+        jScrollPane9.setViewportView(jtaComentario);
 
         try {
             jftfData8.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -90,12 +85,6 @@ public class GUILembrete extends javax.swing.JFrame {
                 jftfData8ActionPerformed(evt);
             }
         });
-
-        try {
-            jftfHorario8.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
 
         jlEnviar8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/ok.png"))); // NOI18N
 
@@ -114,46 +103,41 @@ public class GUILembrete extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jlEnviarLembrete8)
-                        .addGap(225, 225, 225))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jcbContato8, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(237, 237, 237))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jlEnviar8)
-                        .addGap(306, 306, 306))))
+                .addComponent(jlEnviarLembrete8)
+                .addGap(225, 225, 225))
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
+                        .addContainerGap()
+                        .addComponent(jlVoltar8)
+                        .addGap(228, 228, 228)
+                        .addComponent(jlEnviar8))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jbHistorico)
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addComponent(jlData8)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jftfData8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap())
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addComponent(jcbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(237, 237, 237)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jlDiaSemana)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jlData8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlNome8))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addComponent(jftfData8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jlHorario8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jftfHorario8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jtfNome8, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(292, 292, 292)
-                        .addComponent(jlObservacao8)))
-                .addContainerGap(137, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlVoltar8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbHistorico)
-                .addGap(21, 21, 21))
+                            .addComponent(jlLembrete)
+                            .addComponent(jtfDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(212, 212, 212))))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,25 +145,26 @@ public class GUILembrete extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jlEnviarLembrete8)
                 .addGap(18, 18, 18)
-                .addComponent(jcbContato8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jcbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jftfData8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlData8)
-                    .addComponent(jlHorario8)
-                    .addComponent(jftfHorario8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlData8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfNome8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlNome8))
-                .addGap(21, 21, 21)
-                .addComponent(jlObservacao8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jlEnviar8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlVoltar8)
+                    .addComponent(jlDiaSemana)
+                    .addComponent(jtfDiaSemana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jlLembrete)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                        .addComponent(jlEnviar8))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jlVoltar8)))
                 .addGap(8, 8, 8))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,9 +186,9 @@ public class GUILembrete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jcbContato8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbContato8ActionPerformed
+    private void jcbTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jcbContato8ActionPerformed
+    }//GEN-LAST:event_jcbTituloActionPerformed
 
     private void jftfData8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfData8ActionPerformed
         // TODO add your handling code here:
@@ -249,132 +234,18 @@ public class GUILembrete extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JButton jbHistorico;
-    private javax.swing.JComboBox jcbContato;
-    private javax.swing.JComboBox jcbContato1;
-    private javax.swing.JComboBox jcbContato2;
-    private javax.swing.JComboBox jcbContato3;
-    private javax.swing.JComboBox jcbContato4;
-    private javax.swing.JComboBox jcbContato5;
-    private javax.swing.JComboBox jcbContato6;
-    private javax.swing.JComboBox jcbContato7;
-    private javax.swing.JComboBox jcbContato8;
-    private javax.swing.JFormattedTextField jftfData;
-    private javax.swing.JFormattedTextField jftfData1;
-    private javax.swing.JFormattedTextField jftfData2;
-    private javax.swing.JFormattedTextField jftfData3;
-    private javax.swing.JFormattedTextField jftfData4;
-    private javax.swing.JFormattedTextField jftfData5;
-    private javax.swing.JFormattedTextField jftfData6;
-    private javax.swing.JFormattedTextField jftfData7;
+    private javax.swing.JComboBox jcbTitulo;
     private javax.swing.JFormattedTextField jftfData8;
-    private javax.swing.JFormattedTextField jftfHorario;
-    private javax.swing.JFormattedTextField jftfHorario1;
-    private javax.swing.JFormattedTextField jftfHorario2;
-    private javax.swing.JFormattedTextField jftfHorario3;
-    private javax.swing.JFormattedTextField jftfHorario4;
-    private javax.swing.JFormattedTextField jftfHorario5;
-    private javax.swing.JFormattedTextField jftfHorario6;
-    private javax.swing.JFormattedTextField jftfHorario7;
-    private javax.swing.JFormattedTextField jftfHorario8;
-    private javax.swing.JLabel jlData;
-    private javax.swing.JLabel jlData1;
-    private javax.swing.JLabel jlData2;
-    private javax.swing.JLabel jlData3;
-    private javax.swing.JLabel jlData4;
-    private javax.swing.JLabel jlData5;
-    private javax.swing.JLabel jlData6;
-    private javax.swing.JLabel jlData7;
     private javax.swing.JLabel jlData8;
-    private javax.swing.JLabel jlEnviar;
-    private javax.swing.JLabel jlEnviar1;
-    private javax.swing.JLabel jlEnviar2;
-    private javax.swing.JLabel jlEnviar3;
-    private javax.swing.JLabel jlEnviar4;
-    private javax.swing.JLabel jlEnviar5;
-    private javax.swing.JLabel jlEnviar6;
-    private javax.swing.JLabel jlEnviar7;
+    private javax.swing.JLabel jlDiaSemana;
     private javax.swing.JLabel jlEnviar8;
-    private javax.swing.JLabel jlEnviarLembrete;
-    private javax.swing.JLabel jlEnviarLembrete1;
-    private javax.swing.JLabel jlEnviarLembrete2;
-    private javax.swing.JLabel jlEnviarLembrete3;
-    private javax.swing.JLabel jlEnviarLembrete4;
-    private javax.swing.JLabel jlEnviarLembrete5;
-    private javax.swing.JLabel jlEnviarLembrete6;
-    private javax.swing.JLabel jlEnviarLembrete7;
     private javax.swing.JLabel jlEnviarLembrete8;
-    private javax.swing.JLabel jlHorario;
-    private javax.swing.JLabel jlHorario1;
-    private javax.swing.JLabel jlHorario2;
-    private javax.swing.JLabel jlHorario3;
-    private javax.swing.JLabel jlHorario4;
-    private javax.swing.JLabel jlHorario5;
-    private javax.swing.JLabel jlHorario6;
-    private javax.swing.JLabel jlHorario7;
-    private javax.swing.JLabel jlHorario8;
-    private javax.swing.JLabel jlNome;
-    private javax.swing.JLabel jlNome1;
-    private javax.swing.JLabel jlNome2;
-    private javax.swing.JLabel jlNome3;
-    private javax.swing.JLabel jlNome4;
-    private javax.swing.JLabel jlNome5;
-    private javax.swing.JLabel jlNome6;
-    private javax.swing.JLabel jlNome7;
-    private javax.swing.JLabel jlNome8;
-    private javax.swing.JLabel jlObservacao;
-    private javax.swing.JLabel jlObservacao1;
-    private javax.swing.JLabel jlObservacao2;
-    private javax.swing.JLabel jlObservacao3;
-    private javax.swing.JLabel jlObservacao4;
-    private javax.swing.JLabel jlObservacao5;
-    private javax.swing.JLabel jlObservacao6;
-    private javax.swing.JLabel jlObservacao7;
-    private javax.swing.JLabel jlObservacao8;
-    private javax.swing.JLabel jlVoltar;
-    private javax.swing.JLabel jlVoltar1;
-    private javax.swing.JLabel jlVoltar2;
-    private javax.swing.JLabel jlVoltar3;
-    private javax.swing.JLabel jlVoltar4;
-    private javax.swing.JLabel jlVoltar5;
-    private javax.swing.JLabel jlVoltar6;
-    private javax.swing.JLabel jlVoltar7;
+    private javax.swing.JLabel jlLembrete;
     private javax.swing.JLabel jlVoltar8;
-    private javax.swing.JTextArea jtaObservacao;
-    private javax.swing.JTextArea jtaObservacao1;
-    private javax.swing.JTextArea jtaObservacao2;
-    private javax.swing.JTextArea jtaObservacao3;
-    private javax.swing.JTextArea jtaObservacao4;
-    private javax.swing.JTextArea jtaObservacao5;
-    private javax.swing.JTextArea jtaObservacao6;
-    private javax.swing.JTextArea jtaObservacao7;
-    private javax.swing.JTextArea jtaObservacao8;
-    private javax.swing.JTextField jtfNome;
-    private javax.swing.JTextField jtfNome1;
-    private javax.swing.JTextField jtfNome2;
-    private javax.swing.JTextField jtfNome3;
-    private javax.swing.JTextField jtfNome4;
-    private javax.swing.JTextField jtfNome5;
-    private javax.swing.JTextField jtfNome6;
-    private javax.swing.JTextField jtfNome7;
-    private javax.swing.JTextField jtfNome8;
+    private javax.swing.JTextArea jtaComentario;
+    private javax.swing.JTextField jtfDiaSemana;
     // End of variables declaration//GEN-END:variables
 }
