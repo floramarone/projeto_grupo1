@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <group/>
 =======
 <<<<<<< HEAD
@@ -22,5 +23,12 @@
         <group/>
 >>>>>>> fernando
 >>>>>>> 579771eb94ced3d5cd4003ab24bd35e096d3e23c
+=======
+        <group>
+            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/Visao/GUILembrete.java</file>
+            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/dao/DAOFactory.java</file>
+            <file>file:/E:/Repositorios/projeto_grupo1/ProjetoGrupo1Certo/src/dao/LembreteDAO.java</file>
+        </group>
+>>>>>>> work
     </open-files>
 </project-private>
