@@ -237,6 +237,9 @@
               <Image iconType="3" name="/Img/ok.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jlEnviar8MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlVoltar8">
           <Properties>

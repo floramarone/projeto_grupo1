@@ -114,6 +114,11 @@ public class GUILembrete extends javax.swing.JFrame {
         });
 
         jlEnviar8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/ok.png"))); // NOI18N
+        jlEnviar8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlEnviar8MouseClicked(evt);
+            }
+        });
 
         jlVoltar8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
         jlVoltar8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -233,12 +238,18 @@ public class GUILembrete extends javax.swing.JFrame {
     }//GEN-LAST:event_jftfData8ActionPerformed
 
     private void jlVoltar8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltar8MouseClicked
+        cancelar();
         voltar();
     }//GEN-LAST:event_jlVoltar8MouseClicked
 
     private void jcbDiaSemanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaSemanaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbDiaSemanaActionPerformed
+
+    private void jlEnviar8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlEnviar8MouseClicked
+        cadastrarLembrete();
+        cancelar();
+    }//GEN-LAST:event_jlEnviar8MouseClicked
 
     /**
      * @param args the command line arguments
