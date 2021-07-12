@@ -202,7 +202,7 @@ public class GUITarefa extends javax.swing.JFrame {
         jlCodigo = new javax.swing.JLabel();
         jtfPesquisa = new javax.swing.JTextField();
         jlPesquisePor = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlVoltar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -301,10 +301,10 @@ public class GUITarefa extends javax.swing.JFrame {
 
         jlPesquisePor.setText("Pesquisa por nome:");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jlVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
+        jlVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                jlVoltarMouseClicked(evt);
             }
         });
 
@@ -370,7 +370,7 @@ public class GUITarefa extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel1)
+                .addComponent(jlVoltar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -421,7 +421,7 @@ public class GUITarefa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1))
+                .addComponent(jlVoltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -473,11 +473,11 @@ public class GUITarefa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfPesquisaActionPerformed
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void jlVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltarMouseClicked
         GUIDash d = new GUIDash();
         d.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_jlVoltarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -515,7 +515,6 @@ public class GUITarefa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -535,6 +534,7 @@ public class GUITarefa extends javax.swing.JFrame {
     private javax.swing.JLabel jlNome;
     private javax.swing.JLabel jlPesquisePor;
     private javax.swing.JLabel jlSalvar;
+    private javax.swing.JLabel jlVoltar;
     private javax.swing.JTextArea jtaDescricao;
     private javax.swing.JTextField jtfCodigo;
     private javax.swing.JTextField jtfNome;
