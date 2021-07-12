@@ -29,12 +29,12 @@ public class GUIDash extends javax.swing.JFrame {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jPanel1 = new javax.swing.JPanel();
-        jbTarefa = new javax.swing.JButton();
         jbLembrete = new javax.swing.JButton();
         jlData = new javax.swing.JLabel();
         jbResetar = new javax.swing.JButton();
         jlSair = new javax.swing.JLabel();
         jlCalendario = new javax.swing.JLabel();
+        jbContatos = new javax.swing.JButton();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -43,9 +43,12 @@ public class GUIDash extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(199, 212, 219));
 
-        jbTarefa.setText("Agendar Nova Tarefa");
-
         jbLembrete.setText("Enviar Lembrete");
+        jbLembrete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLembreteActionPerformed(evt);
+            }
+        });
 
         jlData.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlData.setText("13/04/2021");
@@ -66,6 +69,13 @@ public class GUIDash extends javax.swing.JFrame {
             }
         });
 
+        jbContatos.setText("Ver Contatos");
+        jbContatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbContatosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -78,37 +88,38 @@ public class GUIDash extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(152, 152, 152)
-                                .addComponent(jbTarefa)
-                                .addGap(79, 79, 79)
-                                .addComponent(jbLembrete))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(263, 263, 263)
-                                .addComponent(jlCalendario))
+                                .addContainerGap()
+                                .addComponent(jbResetar))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(258, 258, 258)
-                                .addComponent(jlData)))
-                        .addGap(0, 135, Short.MAX_VALUE)))
+                                .addComponent(jlCalendario)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jbResetar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jlData)
+                .addGap(230, 230, 230))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addComponent(jbContatos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(jbLembrete)
+                .addGap(116, 116, 116))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jlSair)
-                .addGap(7, 7, 7)
-                .addComponent(jlData)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlData)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbTarefa)
-                    .addComponent(jbLembrete))
-                .addGap(46, 46, 46)
+                    .addComponent(jbLembrete)
+                    .addComponent(jbContatos))
+                .addGap(11, 11, 11)
                 .addComponent(jlCalendario)
-                .addGap(41, 41, 41)
+                .addGap(17, 17, 17)
                 .addComponent(jbResetar)
                 .addGap(62, 62, 62))
         );
@@ -121,7 +132,7 @@ public class GUIDash extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -138,6 +149,26 @@ public class GUIDash extends javax.swing.JFrame {
         l.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jlSairMouseClicked
+    
+    public void abrirGUILembrete() {
+        GUILembrete l = new GUILembrete();
+        l.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jbLembreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLembreteActionPerformed
+        abrirGUILembrete();
+    }//GEN-LAST:event_jbLembreteActionPerformed
+    
+    public void abrirGUIContato() {
+        GUIContato c = new GUIContato();
+        c.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jbContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbContatosActionPerformed
+        abrirGUIContato();
+    }//GEN-LAST:event_jbContatosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,9 +208,9 @@ public class GUIDash extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbContatos;
     private javax.swing.JButton jbLembrete;
     private javax.swing.JButton jbResetar;
-    private javax.swing.JButton jbTarefa;
     private javax.swing.JLabel jlCalendario;
     private javax.swing.JLabel jlData;
     private javax.swing.JLabel jlSair;

@@ -128,6 +128,11 @@ public class GUILembrete extends javax.swing.JFrame {
         });
 
         jbHistorico.setText("Histórico");
+        jbHistorico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbHistoricoActionPerformed(evt);
+            }
+        });
 
         jcbDiaSemana.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo" }));
         jcbDiaSemana.addActionListener(new java.awt.event.ActionListener() {
@@ -155,16 +160,16 @@ public class GUILembrete extends javax.swing.JFrame {
                 .addContainerGap(229, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(jbHistorico)
-                        .addGap(21, 21, 21))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(jlData8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jftfData8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jcbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(237, 237, 237))))
+                        .addGap(237, 237, 237))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jbHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
@@ -250,6 +255,22 @@ public class GUILembrete extends javax.swing.JFrame {
         cadastrarLembrete();
         cancelar();
     }//GEN-LAST:event_jlEnviar8MouseClicked
+    
+    public void abrirGUIContato() {
+        GUIContato c = new GUIContato();
+        c.setVisible(true);
+        this.setVisible(false);
+    }
+        
+    public void abrirGUIHistoricoLembretes() {
+        GUIHistoricoLembretes hl = new GUIHistoricoLembretes();
+        hl.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHistoricoActionPerformed
+        abrirGUIHistoricoLembretes();
+    }//GEN-LAST:event_jbHistoricoActionPerformed
 
     /**
      * @param args the command line arguments
