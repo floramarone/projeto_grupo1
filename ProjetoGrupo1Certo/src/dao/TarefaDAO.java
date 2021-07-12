@@ -82,6 +82,7 @@ public class TarefaDAO {
             con.close();  
         }
         }
+        
         public void deletarTarefa(int codigo) throws SQLException{
         Connection con = Conexao.getConexao();
         Statement sta = con.createStatement();

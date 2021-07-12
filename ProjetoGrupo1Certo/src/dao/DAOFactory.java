@@ -12,10 +12,12 @@ package dao;
 public class DAOFactory {
     
     private static TarefaDAO tarefaDAO = new TarefaDAO();
+    private static LembreteDAO lembreteDAO = new LembreteDAO();
     
     public static TarefaDAO getTarefaDAO(){
         return tarefaDAO;
     }
+<<<<<<< HEAD
 
     public static ContatoDAO contatoDAO = new ContatoDAO();
         
@@ -29,3 +31,10 @@ public class DAOFactory {
 
 
    
+=======
+    
+    public static LembreteDAO getLembreteDAO(){
+        return lembreteDAO;
+    }
+}
+>>>>>>> ccd37f890158115f708e616a465b5d4a96d5067d
