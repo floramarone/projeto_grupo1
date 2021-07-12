@@ -35,7 +35,7 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
         jlNovaSenha = new javax.swing.JLabel();
         jlConfirmarSenha = new javax.swing.JLabel();
         jlConfirmar = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlVoltar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,7 +54,7 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
 
         jlConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/ok.png"))); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
+        jlVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,7 +79,7 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
                         .addComponent(jbEmail))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)))
+                        .addComponent(jlVoltar)))
                 .addContainerGap(234, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(300, 300, 300)
@@ -108,7 +108,7 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jlConfirmar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(jlVoltar)
                 .addContainerGap())
         );
 
@@ -163,13 +163,13 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbEmail;
     private javax.swing.JLabel jlConfirmar;
     private javax.swing.JLabel jlConfirmarSenha;
     private javax.swing.JLabel jlNovaSenha;
     private javax.swing.JLabel jlRedefinir;
+    private javax.swing.JLabel jlVoltar;
     private javax.swing.JTextField jtfConfirmarSenha;
     private javax.swing.JTextField jtfNovaSenha;
     // End of variables declaration//GEN-END:variables
