@@ -47,7 +47,10 @@ public class GUILembrete extends javax.swing.JFrame {
         jcbDiaSemana.setSelectedItem(null);
     }
     
-    
+    public void preencherTabela(){
+        GUIHistoricoLembretes hl = new GUIHistoricoLembretes();
+        hl.preencherTabela();
+    }
     
     
     @SuppressWarnings("unchecked")
@@ -270,6 +273,7 @@ public class GUILembrete extends javax.swing.JFrame {
     
     private void jbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHistoricoActionPerformed
         abrirGUIHistoricoLembretes();
+        preencherTabela();
     }//GEN-LAST:event_jbHistoricoActionPerformed
 
     /**
