@@ -13,6 +13,7 @@ public class GUITarefa extends javax.swing.JFrame {
     
     public GUITarefa() {
         initComponents();
+        preencherTabela();
     }
     
     public void cadastrarTarefa(){

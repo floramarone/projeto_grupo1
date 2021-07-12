@@ -22,6 +22,7 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
      */
     public GUIHistoricoLembretes() {
         initComponents();
+        preencherTabela();
     }
 
         public void limparTabela(){

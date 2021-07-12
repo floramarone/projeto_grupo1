@@ -269,11 +269,12 @@ public class GUILembrete extends javax.swing.JFrame {
         GUIHistoricoLembretes hl = new GUIHistoricoLembretes();
         hl.setVisible(true);
         this.setVisible(false);
+        preencherTabela();
     }
     
     private void jbHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHistoricoActionPerformed
         abrirGUIHistoricoLembretes();
-        preencherTabela();
+        
     }//GEN-LAST:event_jbHistoricoActionPerformed
 
     /**
