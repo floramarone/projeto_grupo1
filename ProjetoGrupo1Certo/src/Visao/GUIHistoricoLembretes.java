@@ -188,8 +188,8 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void voltar() {
-        GUICadastro c = new GUICadastro();
-        c.setVisible(true);
+        GUILembrete l = new GUILembrete();
+        l.setVisible(true);
         this.setVisible(false);
     }
     

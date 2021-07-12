@@ -15,7 +15,6 @@ import javax.swing.JOptionPane;
  */
 public class GUICadastro extends javax.swing.JFrame {
 
-    GUIPrincipal p = new GUIPrincipal();
     Modelo.Usuario u = new Modelo.Usuario();
     
     public GUICadastro() {
