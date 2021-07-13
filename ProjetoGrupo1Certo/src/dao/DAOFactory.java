@@ -17,24 +17,18 @@ public class DAOFactory {
     public static TarefaDAO getTarefaDAO(){
         return tarefaDAO;
     }
-<<<<<<< HEAD
+
 
     public static ContatoDAO contatoDAO = new ContatoDAO();
         
         public static ContatoDAO getContatoDAO(){
             return contatoDAO;
         }
-    }
-        
-
-
-
-
-   
-=======
     
     public static LembreteDAO getLembreteDAO(){
         return lembreteDAO;
     }
+
 }
->>>>>>> ccd37f890158115f708e616a465b5d4a96d5067d
+
+ 
