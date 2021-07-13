@@ -45,6 +45,11 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
         jlRedefinir.setText("Redefinir Senha");
 
         jbEmail.setText("Enviar Email de Recuperação");
+        jbEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEmailActionPerformed(evt);
+            }
+        });
 
         jlNovaSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jlNovaSenha.setText("Nova Senha");
@@ -55,6 +60,11 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
         jlConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/ok.png"))); // NOI18N
 
         jlVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
+        jlVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlVoltarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -125,6 +135,22 @@ public class GUIRedefinirSenha extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    
+    
+    private void jbEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEmailActionPerformed
+        
+    }//GEN-LAST:event_jbEmailActionPerformed
+    
+    public void voltar() {
+        GUILogin l = new GUILogin();
+        l.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jlVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltarMouseClicked
+        voltar();
+    }//GEN-LAST:event_jlVoltarMouseClicked
 
     /**
      * @param args the command line arguments

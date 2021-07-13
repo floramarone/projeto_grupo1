@@ -122,6 +122,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Enviar Email de Recupera&#xe7;&#xe3;o"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEmailActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfNovaSenha">
         </Component>
@@ -156,6 +159,9 @@
               <Image iconType="3" name="/Img/voltar.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jlVoltarMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

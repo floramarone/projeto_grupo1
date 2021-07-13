@@ -90,6 +90,11 @@ public class GUILogin extends javax.swing.JFrame {
 
         jbRecuperarSenha.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbRecuperarSenha.setText("Esqueci minha senha");
+        jbRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRecuperarSenhaActionPerformed(evt);
+            }
+        });
 
         jbCadastrar.setText("Cadastrar");
         jbCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -219,6 +224,16 @@ public class GUILogin extends javax.swing.JFrame {
     private void jlSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSairMouseClicked
         sair();
     }//GEN-LAST:event_jlSairMouseClicked
+    
+    public void abrirGUIRedefinirSenha() {
+        GUIRedefinirSenha rs = new GUIRedefinirSenha();
+        rs.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jbRecuperarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRecuperarSenhaActionPerformed
+        abrirGUIRedefinirSenha();
+    }//GEN-LAST:event_jbRecuperarSenhaActionPerformed
 
     /**
      * @param args the command line arguments
