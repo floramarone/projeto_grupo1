@@ -152,6 +152,7 @@
         <Component class="javax.swing.JTextField" name="jtfContato">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfContatoActionPerformed"/>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfContatoKeyReleased"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlDeletar">
@@ -160,6 +161,9 @@
               <Image iconType="3" name="/Img/Lixeira.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jlDeletarMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
