@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Visao;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,15 +27,14 @@ public class GUILogin extends javax.swing.JFrame {
         }
         */
         GUIDash d = new GUIDash();
-        
-        jDesktopPrincipal.add(d);
         d.setVisible(true);
+        this.setVisible(false);
     }
         
     public void cadastrar() {
         GUICadastro c = new GUICadastro();
-        jDesktopPrincipal.add(c);
         c.setVisible(true);
+        this.setVisible(false);
     }
     
     
@@ -63,7 +59,7 @@ public class GUILogin extends javax.swing.JFrame {
         jlFacebook = new javax.swing.JLabel();
         jlGoogle = new javax.swing.JLabel();
         jlLogar = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlSair = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +90,11 @@ public class GUILogin extends javax.swing.JFrame {
 
         jbRecuperarSenha.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbRecuperarSenha.setText("Esqueci minha senha");
+        jbRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRecuperarSenhaActionPerformed(evt);
+            }
+        });
 
         jbCadastrar.setText("Cadastrar");
         jbCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -113,10 +114,10 @@ public class GUILogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/voltar.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jlSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Fechar.png"))); // NOI18N
+        jlSair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                jlSairMouseClicked(evt);
             }
         });
 
@@ -154,8 +155,8 @@ public class GUILogin extends javax.swing.JFrame {
                         .addGap(293, 293, 293)
                         .addComponent(jlLogin))
                     .addGroup(jDesktopPrincipalLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(jlSair, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(212, Short.MAX_VALUE))
         );
         jDesktopPrincipalLayout.setVerticalGroup(
@@ -181,9 +182,9 @@ public class GUILogin extends javax.swing.JFrame {
                     .addComponent(jlGoogle))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbCadastrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addGap(27, 27, 27))
+                .addGap(27, 27, 27)
+                .addComponent(jlSair)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -216,14 +217,23 @@ public class GUILogin extends javax.swing.JFrame {
         entrar();
     }//GEN-LAST:event_jlLogarMouseClicked
     
-    public void voltar() {
-        this.dispose();
-        this.setDefaultCloseOperation(GUICadastro.DISPOSE_ON_CLOSE);
+    public void sair() {
+        System.exit(1);
     }
     
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        voltar();
-    }//GEN-LAST:event_jLabel1MouseClicked
+    private void jlSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSairMouseClicked
+        sair();
+    }//GEN-LAST:event_jlSairMouseClicked
+    
+    public void abrirGUIRedefinirSenha() {
+        GUIRedefinirSenha rs = new GUIRedefinirSenha();
+        rs.setVisible(true);
+        this.setVisible(false);
+    }
+    
+    private void jbRecuperarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRecuperarSenhaActionPerformed
+        abrirGUIRedefinirSenha();
+    }//GEN-LAST:event_jbRecuperarSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,7 +272,6 @@ public class GUILogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jDesktopPrincipal;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton jbCadastrar;
     private javax.swing.JButton jbRecuperarSenha;
     private javax.swing.JLabel jlEmail;
@@ -270,6 +279,7 @@ public class GUILogin extends javax.swing.JFrame {
     private javax.swing.JLabel jlGoogle;
     private javax.swing.JLabel jlLogar;
     private javax.swing.JLabel jlLogin;
+    private javax.swing.JLabel jlSair;
     private javax.swing.JLabel jlSenha;
     private javax.swing.JTextField jtfEmail;
     private javax.swing.JTextField jtfSenha;

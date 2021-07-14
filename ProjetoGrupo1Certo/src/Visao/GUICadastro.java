@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
  *
  * @author FERNANDO FINK
  */
-public class GUICadastro extends javax.swing.JInternalFrame {
-    GUIPrincipal p = new GUIPrincipal();
+public class GUICadastro extends javax.swing.JFrame {
+
     Modelo.Usuario u = new Modelo.Usuario();
     
     public GUICadastro() {
@@ -48,6 +48,8 @@ public class GUICadastro extends javax.swing.JInternalFrame {
         jftfTelefone = new javax.swing.JFormattedTextField();
         jlCadastrar = new javax.swing.JLabel();
         jlVoltar = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(199, 212, 219));
 
@@ -138,9 +140,9 @@ public class GUICadastro extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jlConfirmar)
                             .addComponent(jlTelefone)
-                            .addComponent(jtfConfirmar, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                            .addComponent(jtfConfirmar)
                             .addComponent(jftfCpf)
-                            .addComponent(jftfTelefone))
+                            .addComponent(jftfTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE))
                         .addGap(26, 26, 26))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +152,7 @@ public class GUICadastro extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(jlCadastrar)))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +184,7 @@ public class GUICadastro extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(jlCadastrar)
                 .addGap(14, 14, 14)
                 .addComponent(jlVoltar)
@@ -203,14 +205,6 @@ public class GUICadastro extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfConfirmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfConfirmarActionPerformed
-
-    private void jftfCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jftfCpfActionPerformed
-    
     public void confirmar() {
         if (jtfNome.getText().isEmpty() || jtfEmail.getText().isEmpty() || jftfCpf.getText().equals("   .   .   -  ") ||
                 jftfTelefone.getText().equals("+55 (  )      -    ") || jtfSenha.getText().isEmpty() || jtfConfirmar.getText().isEmpty()) {
@@ -226,6 +220,7 @@ public class GUICadastro extends javax.swing.JInternalFrame {
                     u.setTelefone(jftfTelefone.getText());
                     u.setSenha(jtfSenha.getText());
                     voltar();
+                    JOptionPane.showMessageDialog(this, "Seus dados foram cadastrados com sucesso!", "Cadastro Efetuado", JOptionPane.PLAIN_MESSAGE);
                 }
             }
             else {
@@ -233,26 +228,67 @@ public class GUICadastro extends javax.swing.JInternalFrame {
             }
         }            
     }
-        
-// if (jtfSenha.getText().length() <8)    
+    
+    public void voltar() {
+        GUILogin l = new GUILogin();
+        l.setVisible(true);
+        this.setVisible(false);
+    }
     
     private void jtfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNomeActionPerformed
 
-    public void voltar() {
-        this.dispose();
-        this.setDefaultCloseOperation(GUICadastro.DISPOSE_ON_CLOSE);
-    }
-    
-    private void jlVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltarMouseClicked
-        voltar();
-    }//GEN-LAST:event_jlVoltarMouseClicked
+    private void jtfConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfConfirmarActionPerformed
+
+    private void jftfCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jftfCpfActionPerformed
 
     private void jlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlCadastrarMouseClicked
         confirmar();
     }//GEN-LAST:event_jlCadastrarMouseClicked
 
+    private void jlVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltarMouseClicked
+        voltar();
+    }//GEN-LAST:event_jlVoltarMouseClicked
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GUICadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GUICadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GUICadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GUICadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUICadastro().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
