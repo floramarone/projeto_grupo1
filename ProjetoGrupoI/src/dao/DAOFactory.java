@@ -16,4 +16,10 @@ public class DAOFactory {
     public static TarefaDAO getTarefaDAO(){
         return tarefaDAO;
     }
+    
+    private static UsuarioDAO usuarioDAO = new UsuarioDAO();
+    
+    public static UsuarioDAO getUsuarioDAO(){
+        return usuarioDAO;
+    }
 }

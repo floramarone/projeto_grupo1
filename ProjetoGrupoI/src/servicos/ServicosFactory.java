@@ -15,4 +15,10 @@ public class ServicosFactory {
         public static TarefaServicos getTarefaServicos(){
         return tarefaServicos; 
         }
+        
+        private static UsuarioServicos usuarioServicos = new UsuarioServicos();
+    
+        public static UsuarioServicos getUsuarioServicos(){
+        return usuarioServicos; 
+        }
 }
