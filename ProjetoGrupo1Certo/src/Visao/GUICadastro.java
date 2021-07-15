@@ -8,6 +8,11 @@ package Visao;
 import Modelo.LimitadorLetras;
 import Modelo.LimitadorNumeros;
 import javax.swing.JOptionPane;
+import Modelo.Usuario;
+import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+import servicos.UsuarioServicos;
+
 
 /**
  *
@@ -21,6 +26,25 @@ public class GUICadastro extends javax.swing.JFrame {
         initComponents();
         jtfNome.setDocument(new LimitadorLetras(35));
         jtfEmail.setDocument(new LimitadorLetras(40));
+        
+    }
+    
+    public void cadastrarUsuario(){
+       try{
+           Usuario u = new Usuario();
+        
+           u.setNome(jtfNome.getText());
+           u.setEmail((jtfEmail.getText()));
+           u.setSenha((jtfSenha.getText()));
+           u.setTelefone((jftfTelefone.getText()));
+           u.setCpf((jftfCpf.getText()));
+           
+           servicos.UsuarioServicos us = servicos.ServicosFactory.getUsuarioServicos();
+           us.cadastrarUsuario(u);
+           JOptionPane.showMessageDialog(null,"Seu usuario foi cadastrado com sucesso!", "Confirmação" ,JOptionPane.INFORMATION_MESSAGE);
+        }catch(Exception e){
+           JOptionPane.showMessageDialog(null, "Algo deu errado ao tentar cadastrar esse usuario"+e.getMessage(), "Erro!" , JOptionPane.ERROR_MESSAGE);
+       } 
     }
 
     /**
@@ -249,6 +273,7 @@ public class GUICadastro extends javax.swing.JFrame {
 
     private void jlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlCadastrarMouseClicked
         confirmar();
+        cadastrarUsuario();
     }//GEN-LAST:event_jlCadastrarMouseClicked
 
     private void jlVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVoltarMouseClicked

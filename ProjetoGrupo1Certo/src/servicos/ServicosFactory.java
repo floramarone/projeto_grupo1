@@ -12,22 +12,18 @@ package servicos;
 public class ServicosFactory {
        private static TarefaServicos tarefaServicos = new TarefaServicos();
        private static LembreteServicos lembreteServicos = new LembreteServicos();
+       private static UsuarioServicos usuarioServicos = new UsuarioServicos();
        
         public static TarefaServicos getTarefaServicos(){
         return tarefaServicos; 
         }
-        
-<<<<<<< HEAD:ProjetoGrupoI/src/servicos/ServicosFactory.java
-        private static UsuarioServicos usuarioServicos = new UsuarioServicos();
     
         public static UsuarioServicos getUsuarioServicos(){
         return usuarioServicos; 
         }
-=======
+
         public static LembreteServicos getLembreteServicos(){
         return lembreteServicos; 
         }
-        
-        
->>>>>>> master:ProjetoGrupo1Certo/src/servicos/ServicosFactory.java
+    
 }

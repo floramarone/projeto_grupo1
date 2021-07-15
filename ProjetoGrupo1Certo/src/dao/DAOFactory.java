@@ -13,19 +13,17 @@ public class DAOFactory {
     
     private static TarefaDAO tarefaDAO = new TarefaDAO();
     private static LembreteDAO lembreteDAO = new LembreteDAO();
+    private static UsuarioDAO usuarioDAO = new UsuarioDAO();
     
     public static TarefaDAO getTarefaDAO(){
         return tarefaDAO;
     }
     
-<<<<<<< HEAD:ProjetoGrupoI/src/dao/DAOFactory.java
-    private static UsuarioDAO usuarioDAO = new UsuarioDAO();
-    
     public static UsuarioDAO getUsuarioDAO(){
-        return usuarioDAO;
-=======
+        return usuarioDAO;  
+    }    
+    
     public static LembreteDAO getLembreteDAO(){
         return lembreteDAO;
->>>>>>> master:ProjetoGrupo1Certo/src/dao/DAOFactory.java
     }
 }

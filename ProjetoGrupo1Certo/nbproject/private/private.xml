@@ -5,9 +5,14 @@
         <group>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUILogin.java</file>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/LembreteServicos.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/LembreteDAO.java</file>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/ServicosFactory.java</file>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Modelo/Usuario.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/TarefaDAO.java</file>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUICadastro.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/UsuarioDAO.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/DAOFactory.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/UsuarioServicos.java</file>
             <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUITarefa.java</file>
         </group>
     </open-files>

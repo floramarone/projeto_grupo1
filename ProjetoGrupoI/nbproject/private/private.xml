@@ -2,25 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/dao/TarefaDAO.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/Modelo/TarefaVO.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/servicos/TarefaServicos.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/Visao/GUICadastro.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/Modelo/Usuario.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/servicos/ServicosFactoryU.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/dao/DAOFactoryU.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/Visao/GUILogin.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/servicos/UsuarioServicos.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/dao/DAOFactory.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/servicos/ServicosFactory.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/Visao/GUITarefa.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/dao/UsuarioDAO.java</file>
-            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupoI/src/persistencia/Conexao.java</file>
-        </group>
-=======
         <group/>
->>>>>>> master
     </open-files>
 </project-private>
