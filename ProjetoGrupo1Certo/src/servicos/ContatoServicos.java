@@ -6,8 +6,10 @@
 package servicos;
 
 import Modelo.ContatoVO;
+import Modelo.TarefaVO;
 import dao.ContatoDAO;
 import dao.DAOFactory;
+import dao.TarefaDAO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -37,5 +39,8 @@ public class ContatoServicos {
          ContatoDAO cDAO = DAOFactory.getContatoDAO();
          cDAO.filtrar(query);         
      }
-
+    public ArrayList<ContatoVO> buscar() throws SQLException{
+            ContatoDAO cDAO = DAOFactory.getContatoDAO();
+            return cDAO.buscar();
+    } 
 }

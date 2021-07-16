@@ -12,7 +12,7 @@ package Modelo;
 public class ContatoVO {
     
     private String Nome;
-    private int Telefone;
+    private String Telefone;
 
     public String getNome() {
         return Nome;
@@ -22,15 +22,19 @@ public class ContatoVO {
         this.Nome = Nome;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(int Telefone) {
+    public void setTelefone(String Telefone) {
         this.Telefone = Telefone;
     }
 
     public void setContato(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setID(int aInt) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

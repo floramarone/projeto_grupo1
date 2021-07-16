@@ -1,7 +1,10 @@
 package Visao;
+import Modelo.ContatoVO;
 import Modelo.TarefaVO;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import servicos.TarefaServicos;
@@ -13,6 +16,7 @@ public class GUITarefa extends javax.swing.JFrame {
     
     public GUITarefa() {
         initComponents();
+        preencherTabela();
     }
     
     public void cadastrarTarefa(){

@@ -12,6 +12,7 @@ package servicos;
 public class ServicosFactory {
        private static TarefaServicos tarefaServicos = new TarefaServicos();
        private static LembreteServicos lembreteServicos = new LembreteServicos();
+       private static ContatoServicos contatoServicos =new ContatoServicos();
        
         public static TarefaServicos getTarefaServicos(){
         return tarefaServicos; 
@@ -19,6 +20,9 @@ public class ServicosFactory {
         
         public static LembreteServicos getLembreteServicos(){
         return lembreteServicos; 
+        }
+        public static ContatoServicos getContatoServicos(){
+            return contatoServicos;
         }
         
         

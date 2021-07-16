@@ -26,8 +26,8 @@ public class ContatoDAO {
         try{
             String sql;//String que receberá o comando SQL
             
-            sql = "insert into contato(NOME,TELEFONE)"
-                    +"values('"+cVO.getNome()+"', '"+cVO.getTelefone()+"',)";
+            sql = "insert into contato(ID,NOME,TELEFONE)"
+                    +"values(null, '"+cVO.getNome()+"', '"+cVO.getTelefone()+"',)";
             stat.execute(sql);
         }catch(SQLException e){
             throw new SQLException("Erro ao inserir contato!"+e.getMessage());
@@ -48,8 +48,9 @@ public class ContatoDAO {
             
             while(cs.next()){
                 ContatoVO c = new ContatoVO();
-                c.setNome(cs.getString("Nome"));
-                c.setTelefone(cs.getInt("Telefone"));                
+                c.setID(cs.getInt("ID"));
+                c.setNome(cs.getString("NOME"));
+                c.setTelefone(cs.getString("TELEFONE"));                
                 contato.add(c);
             }
             return contato;
@@ -67,7 +68,7 @@ public class ContatoDAO {
         Statement sta = con.createStatement();
         try{
             String sql;
-            sql="update contato set nome = '"+cVO.getNome()+ "', telefone = '"+cVO.getTelefone();
+            sql="update contato set nome = '"+cVO.getNome()+ "', telefone = "+cVO.getTelefone();
             sta.executeUpdate(sql);
             
         }catch(SQLException e){
@@ -104,7 +105,7 @@ public class ContatoDAO {
             while(cs.next()){
                 ContatoVO t = new ContatoVO();
                 t.setNome(cs.getString("Nome"));
-                t.setTelefone(cs.getInt("Telefone"));                
+                t.setTelefone(cs.getString("Telefone"));                
             }
                 return contato;            
             

@@ -22,6 +22,7 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
      */
     public GUIHistoricoLembretes() {
         initComponents();
+        preencherTabela();
     }
 
         public void limparTabela(){
@@ -65,7 +66,7 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
             }else{
                 LembreteServicos ls = servicos.ServicosFactory.getLembreteServicos();
 
-                String query = "where nome like '%"+jtfContato.getText()+"%'";
+                String query = "where titulo like '%"+jtfContato.getText()+"%'";
 
                 ArrayList<LembreteVO> lembrete = new ArrayList<>();
             
@@ -89,6 +90,27 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
         }
     }//fecha filtrar
      
+    public void deletarLembrete(){
+        try{
+            int linha = jTableLembretes.getSelectedRow();
+            if(linha == -1){
+                JOptionPane.showMessageDialog(null, "Você não selecionou uma linha para exclusão.", "Erro!", JOptionPane.ERROR_MESSAGE);
+            }else{
+                LembreteServicos ls = servicos.ServicosFactory.getLembreteServicos();
+                String codigo = (String) jTableLembretes.getValueAt(linha, 0);
+                int r = JOptionPane.showConfirmDialog(null,"Você realmente deseja excluir os dados?","Confirmação",JOptionPane.WARNING_MESSAGE);
+                if(r == JOptionPane.YES_OPTION){
+                    ls.deletarLembrete(Integer.parseInt(codigo));
+                    
+                }else{
+                    JOptionPane.showMessageDialog(null, "Sua exclusão não foi executada.", "Erro!", JOptionPane.ERROR_MESSAGE);
+                }
+                
+            }
+        }catch(Exception e){
+           JOptionPane.showMessageDialog(null, "Ops, algo deu errado!"+e.getMessage(), "Erro!", JOptionPane.ERROR_MESSAGE); 
+        }
+    } 
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -137,8 +159,18 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
                 jtfContatoActionPerformed(evt);
             }
         });
+        jtfContato.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfContatoKeyReleased(evt);
+            }
+        });
 
         jlDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Lixeira.png"))); // NOI18N
+        jlDeletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlDeletarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -217,6 +249,18 @@ public class GUIHistoricoLembretes extends javax.swing.JFrame {
     private void jtfContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfContatoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfContatoActionPerformed
+
+    private void jtfContatoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContatoKeyReleased
+        limparTabela();
+        filtrarLembrete();
+    }//GEN-LAST:event_jtfContatoKeyReleased
+
+    private void jlDeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlDeletarMouseClicked
+        deletarLembrete();
+        limparTabela();
+        preencherTabela();
+         JOptionPane.showMessageDialog(null, "Sua exclusão foi executada com sucesso.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jlDeletarMouseClicked
 
     /**
      * @param args the command line arguments
