@@ -27,8 +27,8 @@ public class UsuarioDAO {
         try{
             String sql;//String que receberá o comando SQL
             
-            sql = "insert into usuario(nome, email, senha, telefone, cpf )"
-                    +"values(null, '"+uSU.getNome()+"', '"+uSU.getEmail()+"', '"+uSU.getSenha()+"', '"+uSU.getTelefone()+"', '"+uSU.getCpf()+"')";
+            sql = "insert into usuario(cpf, nome, email, senha, telefone )"
+                    +"values('"+uSU.getCpf()+"', '"+uSU.getNome()+"', '"+uSU.getEmail()+"', '"+uSU.getSenha()+"', '"+uSU.getTelefone()+"')";
             stat.execute(sql);
         }catch(SQLException e){
             throw new SQLException("Erro ao cadastrar usuario "+e.getMessage());
