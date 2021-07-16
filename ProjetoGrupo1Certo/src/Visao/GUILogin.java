@@ -17,7 +17,7 @@ public class GUILogin extends javax.swing.JFrame {
     
     public void entrar() {
         
-        /*
+        
         if (jtfEmail.getText().equals(u.getEmail()) && jtfSenha.getText().equals(u.getSenha())) {
         GUIDash d = new GUIDash();
         jDesktopPrincipal.add(d);
@@ -25,7 +25,7 @@ public class GUILogin extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Login e/ou senha incorreto(s)", "Erro", JOptionPane.ERROR_MESSAGE);
         }
-        */
+        
         GUIDash d = new GUIDash();
         d.setVisible(true);
         this.setVisible(false);

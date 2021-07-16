@@ -13,6 +13,7 @@ public class DAOFactory {
     
     private static TarefaDAO tarefaDAO = new TarefaDAO();
     private static LembreteDAO lembreteDAO = new LembreteDAO();
+    private static UsuarioDAO usuarioDAO = new UsuarioDAO();
     
     public static TarefaDAO getTarefaDAO(){
         return tarefaDAO;
@@ -24,6 +25,10 @@ public class DAOFactory {
         public static ContatoDAO getContatoDAO(){
             return contatoDAO;
         }
+    
+    public static UsuarioDAO getUsuarioDAO(){
+        return usuarioDAO;  
+    }    
     
     public static LembreteDAO getLembreteDAO(){
         return lembreteDAO;
