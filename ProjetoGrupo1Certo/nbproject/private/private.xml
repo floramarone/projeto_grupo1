@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/rodriguesgus/OneDrive%20-%20SNEF%20BRASIL/Área%20de%20Trabalho/Senac/ProjetoGrupo1Certo/src/dao/ContatoDAO.java</file>
+=======
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUILogin.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/LembreteServicos.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/LembreteDAO.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/ServicosFactory.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Modelo/Usuario.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/TarefaDAO.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUICadastro.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/UsuarioDAO.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/dao/DAOFactory.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/servicos/UsuarioServicos.java</file>
+            <file>file:/D:/repositorio/projetoGrupo1/ProjetoGrupo1Certo/src/Visao/GUITarefa.java</file>
+>>>>>>> a28381057a9cb75bcfd813280a6ba69a8392ca77
+        </group>
+    </open-files>
+</project-private>
